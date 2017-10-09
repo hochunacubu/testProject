@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить расписание{% endblock %}
+
+{% block content %}
+
+<h1>Добавить расписание</h1>
+
+    <div class="errors">
+        {% for error in errors %}
+            <p>{{ error }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="successes">
+        {% for success in successes %}
+            <p>{{ success }}</p>
+        {% endfor %}
+    </div>
+
+    <form name="add_timetables" method="post">
+
+        <div class="form-group">
+
+            <label for="region">Выберите регион из списка</label>
+            <select name="region" id="region">
+
+                {% for key, region in regions %}
+                    <option value="{{ region.id }}">{{ region.region_name }}</option>
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label for="courier">Выберите курьера</label>
+            <select name="courier" id="courier">
+
+                {% for key, courier in couriers %}
+                    <option value="{{ courier.id }}">{{ courier.family_name }} {{ courier.name }} {{ courier.second_name }}</option>
+                {% endfor %}
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date_start">Дата выезда из Москвы</label>
+            <input type="date" name="date_start" id="date_start" value=""/>
+        </div>
+
+        <div class="form-button">
+            <button type="submit" name="action" value="addTimetables">
+                Добавить расписание
+            </button>
+        </div>
+
+    </form>
+
+{% endblock %}

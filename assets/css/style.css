@@ -1,0 +1,102 @@
+body{
+    font-family: Arial;
+}
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    background: #333;
+    height: 45px;
+}
+.navigation ul li{
+    float: left;
+    width: 15%;
+    padding-left: 1%;
+    height: 30px;
+    background: #333;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.2s;
+    list-style-type: none;
+}
+.navigation ul li:hover, .navigation ul li.active{
+    background: #585858;
+}
+.navigation ul li a{
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+}
+.form-search{
+    background: #ccc;
+    height: 43px;
+    padding-top: 12px;
+    padding-left: 1%;
+}
+.form-search input[type=date]{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #989898;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.form-search input[type=submit]{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    color: #fff;
+    background: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+#content{
+    width:1200px;
+    margin: auto;
+}
+
+.errors p{
+    color:red;
+    margin-bottom: 5px;
+}
+.successes p{
+    color:green;
+    margin-bottom: 5px;
+}
+.form-group, .form-button{
+    padding-top:20px;
+}
+.form-group label{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group select, .form-group input, .form-button button{
+    width: 35%;
+    height: 36px;
+    border-radius: 5px;
+    background: none;
+    border: 1px solid #a9a9a9;
+    outline: none;
+    cursor: pointer;
+}
+.form-button button{
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.form-button button:hover{
+    background: #000;
+}
+.list .list-block{
+    border: 1px solid #ccc;
+    background: #efefef;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

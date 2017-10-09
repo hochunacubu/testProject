@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+<div id="content">
+
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                <a href="/add/">Добавить расписание</a>
+            </li>
+        </ul>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

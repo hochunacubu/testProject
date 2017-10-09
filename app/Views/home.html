@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Стартовая страница{% endblock %}
+
+{% block content %}
+<h2>Выберите период, за который необходимо вывести расписания</h2>
+
+<form action="" method="get">
+
+    <input type="hidden" name="action" value="getTimetables"/>
+
+    <div class="form-search">
+        <span>с</span>
+        <input type="date" name="date_start" value=""/>
+        <span>по</span>
+        <input type="date" name="date_end" value=""/>
+        <input type="submit" value="Вывести"/>
+    </div>
+
+</form>
+
+<h3>Расписания</h3>
+<div class="list">
+
+    {% for key, timetable in timetables %}
+
+        <div class="list-block">
+
+            <p>Дата начала: {{ timetable.date_start }}</p>
+            <p>Регион: {{ timetable.region_name }}</p>
+            <p>Курьер: {{ timetable.family_name }} {{ timetable.name }} {{ timetable.second_name }}</p>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

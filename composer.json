@@ -1,0 +1,22 @@
+{
+  "name": "Timetables",
+
+  "require": {
+
+    "illuminate/database": "5.1.8",
+    "twig/twig" : "1.*"
+
+  },
+
+  "autoload": {
+
+    "psr-4": {
+
+      "Timetables\\": "app/",
+      "Timetables\\Models\\": "app/Model/"
+
+    }
+
+  }
+
+}
