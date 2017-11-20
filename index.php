@@ -1,12 +1,10 @@
 <?php
 
-    require_once dirname(__FILE__) . '/config.php';
-    require_once dirname(__FILE__) . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-    $App = new \Timetables\App();
+$App = new \Timetables\App();
 
-    $req = !empty($_REQUEST['q'])
-        ? trim($_REQUEST['q'])
-        : '';
+$req = !empty($_REQUEST['q']) ? trim($_REQUEST['q']) : '';
 
-    $App->handleRequest($req);
+$App->handleRequest($req);
